@@ -24,7 +24,7 @@ function getEntityModel(entityType) {
     return mongoose.models[entityType];  
   }
 
-  // Registra o modelo dinâmico se não estiver registrado
+  // Registra o modelo dinâmico se não estiver registrado, não estava funcionando sem essa funcao em questão.
   return mongoose.model(entityType, new mongoose.Schema({
     data: { type: mongoose.Schema.Types.Mixed, required: true },
   }), entityType);
