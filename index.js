@@ -122,7 +122,7 @@ app.put('/entities/:entityType/:id', async (req, res) => {
   }
 });
 
-// Rota GET para buscar com filtros, paginação e projeção (sem confundir com _id)
+// Rota GET para buscar com filtros, paginação e projeção
 app.get('/entities', async (req, res) => {
   const { entityType, limit, skip, fields, query } = req.query;
 
